@@ -1,0 +1,47 @@
+{
+  "trainings": [
+    "id",
+    "owner_id",
+    "pet_name",
+    "training_type",
+    "status",
+    "created_at"
+  ],
+  "appointments": [
+    "id",
+    "pet_name",
+    "service",
+    "date",
+    "status",
+    "created_at"
+  ],
+  "orders": [
+    "id",
+    "user_id",
+    "service_type",
+    "item_name",
+    "payment_method",
+    "amount",
+    "created_at"
+  ],
+  "pets": [
+    "id",
+    "owner_id",
+    "name",
+    "type",
+    "breed",
+    "age",
+    "gender",
+    "weight",
+    "image",
+    "created_at"
+  ],
+  "profiles": [
+    "id",
+    "name",
+    "email",
+    "phone",
+    "created_at",
+    "role"
+  ]
+}

@@ -1,0 +1,462 @@
+/* ========================================
+   About Us - Premium Redesign
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
+
+.about-us-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Video Background ── */
+.video-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(15, 12, 41, 0.85) 0%,
+      rgba(48, 43, 99, 0.75) 50%,
+      rgba(36, 36, 62, 0.85) 100%);
+  z-index: 1;
+}
+
+/* ── Layout ── */
+.about-us-content-wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 2rem 2rem 4rem;
+  background: transparent;
+}
+
+.about-us-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-us-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff 0%, #a29bfe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* ── Back Button ── */
+.back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+/* ── Content Area ── */
+.about-us-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Glassmorphic Sections ── */
+.about-section,
+.about-hero {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 3rem;
+  margin-bottom: 2.5rem;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.about-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, #a29bfe, transparent) 1;
+}
+
+.about-section p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Hero ── */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, #a29bfe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.2;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+}
+
+.hero-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(162, 155, 254, 0.15), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Services Grid ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(162, 155, 254, 0.12), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(162, 155, 254, 0.45);
+  box-shadow: 0 20px 40px rgba(108, 92, 231, 0.3);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(162, 155, 254, 0.4));
+}
+
+.service-card h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Video Section ── */
+.video-container {
+  margin-top: 2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+/* ── Gallery ── */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(162, 155, 254, 0.4);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* ── Features / Why Choose Us ── */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(162, 155, 254, 0.1);
+  border-color: rgba(162, 155, 254, 0.3);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.4);
+}
+
+.feature-item h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.feature-item p {
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ── Contact Section ── */
+.contact-section {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%) !important;
+  border-color: rgba(162, 155, 254, 0.35) !important;
+}
+
+.contact-section h2 {
+  color: #fff !important;
+  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent) 1 !important;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-info p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1rem !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  transition: all 0.3s;
+}
+
+.contact-info p:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-info strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.35rem;
+}
+
+.contact-info a {
+  color: #a29bfe;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.contact-info a:hover {
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about-us-content-wrapper {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .services-grid,
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-header h1 {
+    font-size: 1.6rem;
+  }
+}

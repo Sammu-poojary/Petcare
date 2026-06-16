@@ -1,0 +1,475 @@
+.track-order-container {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding-bottom: 80px;
+}
+
+.track-header {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.track-header .back-btn {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.track-header .back-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.track-content {
+    max-width: 800px;
+    margin: -30px auto 0;
+    padding: 0 20px;
+}
+
+.track-section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.track-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.no-data {
+    color: #888;
+    text-align: center;
+    padding: 20px;
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.order-info h3 {
+    margin: 0 0 10px 0;
+    color: #2d3436;
+}
+
+.order-info p {
+    margin: 5px 0;
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+.status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.status.pending-approval,
+.status.processing,
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.shipped {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status.delivered,
+.status.completed,
+.status.accepted {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.rejected,
+.status.deleted,
+.status.cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.order-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.track-btn,
+.review-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.track-btn {
+    background: #FF6B6B;
+    color: white;
+}
+
+.review-btn {
+    background: #4ecdc4;
+    color: white;
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.review-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 380px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hide scrollbar for review modal */
+.review-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.review-modal {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes modalSlideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Component for Interactive User Ratings */
+.star-rating {
+    display: flex;
+    gap: 10px;
+    font-size: 2rem;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+.star {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star.active {
+    color: #f1c40f;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px rgba(241, 196, 15, 0.5));
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.star:active {
+    transform: scale(0.9);
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group select,
+.form-group textarea,
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.image-preview {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    background: #eee;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .order-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-actions {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .order-actions button {
+        flex: 1;
+    }
+}
+
+/* Tracking Modal */
+.tracking-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 500px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #2d3436;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #b2bec3;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #636e72;
+}
+
+/* Stepper */
+.stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.step-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f2f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #f1f2f6;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.step-connector {
+    width: 3px;
+    background: #f1f2f6;
+    flex: 1;
+    min-height: 40px;
+    margin: -5px 0;
+    transition: background 0.3s ease;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.step-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2d3436;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: #b2bec3;
+}
+
+/* Step States */
+.step.completed .step-icon {
+    background: #00b894;
+    box-shadow: 0 0 0 2px #00b894;
+    color: white;
+}
+
+.step.completed .step-connector {
+    background: #00b894;
+}
+
+.step.completed .step-label {
+    color: #00b894;
+}
+
+.step.current .step-icon {
+    background: #FF8E53;
+    box-shadow: 0 0 0 2px #FF8E53;
+    color: white;
+    transform: scale(1.1);
+}
+
+.step.current .step-label {
+    color: #FF8E53;
+}
+
+.step.current .step-desc {
+    color: #FF8E53;
+    font-weight: 600;
+}
+
+/* Order Details Summary */
+.order-details-summary {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item span {
+    font-size: 0.8rem;
+    color: #636e72;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.detail-item strong {
+    color: #2d3436;
+    font-size: 1rem;
+}
+
+.detail-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2d3436;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .tracking-modal {
+        padding: 20px;
+    }
+}

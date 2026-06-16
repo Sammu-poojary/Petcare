@@ -1,0 +1,198 @@
+.training-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(245, 247, 250, 0.6) 0%, rgba(195, 207, 226, 0.6) 100%), url('/images/back2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem;
+}
+
+/* Service page background */
+/* No global body background here — SplashScreen should remain image-free */
+
+.training-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.back-btn {
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+.training-header h1 {
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.pet-type-badge {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.training-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.training-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.training-card h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.training-style-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.training-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-btn,
+.add-to-cart-btn {
+  flex: 1;
+  padding: 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.book-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.add-to-cart-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+/* ============================= */
+/* TRAINING VIDEOS — FIXED HERE */
+/* ============================= */
+
+.training-videos-section {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.training-videos-section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #667eea;
+}
+
+.training-videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* VIDEO FRAME */
+.training-video-item {
+  height: 260px;           /* ✅ fixed frame */
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.training-video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* VIDEO */
+.training-video {
+  width: 100%;
+  height: 100%;            /* ✅ fill container */
+  object-fit: cover;       /* ✅ perfect fit */
+  display: block;
+  border-radius: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .training-video-item {
+    height: 220px;
+  }
+
+  .training-videos-section-title {
+    font-size: 1.5rem;
+  }
+}

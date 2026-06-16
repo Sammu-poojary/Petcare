@@ -1,0 +1,245 @@
+/* LostAndFound.css */
+
+.lost-found-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .lf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .back-btn, .report-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .back-btn {
+    background-color: #fcece8;
+    color: #f15a31;
+  }
+  
+  .report-btn {
+    background-color: #f15a31;
+    color: white;
+  }
+  
+  .report-btn:hover {
+    background-color: #d14926;
+  }
+  
+  .lf-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-btn/ {
+    padding: 12px 32px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1 1 0;
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .tab-btn.active {
+    border-color: #f15a31;
+    background-color: #fff0eb;
+    color: #f15a31;
+  }
+  
+  .lf-form-container {
+    background: #f9f9f9;
+    padding: 24px;
+    border-radius: 12px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  
+  .lf-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .lf-form input, .lf-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  .file-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .img-preview {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .submit-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #219150;
+  }
+  
+  .lf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  
+  .lf-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .lf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  
+  .lf-card-img {
+    height: 180px;
+    background: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .lf-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .placeholder-img {
+    font-size: 4rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .status-badge.lost {
+    background-color: #ffecec;
+    color: #d63031;
+    border: 1px solid #ffaaaaaa;
+  }
+  
+  .status-badge.found {
+    background-color: #e8f8f5;
+    color: #00b894;
+    border: 1px solid #a3e4d7;
+  }
+  
+  .lf-card-content {
+    padding: 16px;
+  }
+  
+  .lf-card-content h3 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .location, .date, .desc {
+    color: #666;
+    margin: 4px 0;
+    font-size: 0.9rem;
+  }
+  
+  .desc {
+    font-style: italic;
+    margin: 8px 0;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #f1f2f6;
+    color: #2f3542;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .contact-btn:hover {
+    background: #dfe4ea;
+  }
+  
+  .no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+    .lf-header {
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+      text-align: center;
+    }
+  
+    .back-btn, .report-btn {
+      width: 100%;
+    }
+  
+    .lf-tabs {
+      flex-direction: column;
+    }
+  }

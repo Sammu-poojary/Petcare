@@ -1,0 +1,188 @@
+.grooming-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(245, 247, 250, 0.6) 0%, rgba(195, 207, 226, 0.6) 100%), url('/images/back2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2rem;
+}
+
+/* Service page background */
+body {
+  background-image: url('/images/back2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.grooming-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.back-btn {
+  background: white;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+.grooming-header h1 {
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.pet-type-badge {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.grooming-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grooming-styles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.grooming-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grooming-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.grooming-card h3 {
+  color: #667eea;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.grooming-style-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-btn,
+.add-to-cart-btn {
+  flex: 1;
+  padding: 0.875rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.book-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.add-to-cart-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.grooming-card.selected {
+  border: 3px solid #667eea;
+}
+
+/* ============================= */
+/* GROOMING VIDEOS — FIXED HERE */
+/* ============================= */
+
+.grooming-videos-section {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.videos-section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #667eea;
+}
+
+.grooming-videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* VIDEO FRAME */
+.grooming-video-item {
+  height: 260px;            /* ✅ fixed frame */
+  border-radius: 15px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* VIDEO ITSELF */
+.grooming-video {
+  width: 100%;
+  height: 100%;             /* ✅ fill container */
+  object-fit: cover;        /* ✅ perfect fit */
+  display: block;
+  border-radius: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .grooming-video-item {
+    height: 220px;
+  }
+
+  .videos-section-title {
+    font-size: 1.5rem;
+  }
+}

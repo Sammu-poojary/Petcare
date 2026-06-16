@@ -1,0 +1,318 @@
+/* ========================================
+   Doctor Detail - Premium Redesign
+   ======================================== */
+
+.doctor-detail-container {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(15, 12, 41, 0.92) 0%, rgba(48, 43, 99, 0.88) 50%, rgba(36, 36, 62, 0.92) 100%),
+    url('images/back1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Card ── */
+.doctor-detail-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 3rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ── Back Button ── */
+.back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateX(-3px);
+}
+
+/* ── Doctor Header ── */
+.doctor-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.doctor-avatar {
+  min-width: 140px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(162, 155, 254, 0.7);
+  box-shadow:
+    0 0 0 6px rgba(162, 155, 254, 0.15),
+    0 12px 30px rgba(108, 92, 231, 0.4);
+  flex-shrink: 0;
+}
+
+.doctor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-header-info h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, #a29bfe);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.5rem;
+}
+
+.doctor-specialization {
+  color: #d6d0ff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.doctor-rating {
+  color: #fdcb6e;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  background: rgba(253, 203, 110, 0.1);
+  border: 1px solid rgba(253, 203, 110, 0.25);
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  display: inline-block;
+}
+
+/* ── Detail Content ── */
+.doctor-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.detail-section:hover {
+  background: rgba(162, 155, 254, 0.07);
+  border-color: rgba(162, 155, 254, 0.2);
+}
+
+.detail-section h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.doctor-description {
+  color: #fff !important;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Contact Actions ── */
+.contact-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact-action-btn {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.email-btn {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.45);
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #00b894, #55efc4);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 184, 148, 0.45);
+}
+
+.contact-action-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
+}
+
+/* ── Consult Button ── */
+.consult-btn {
+  width: 100%;
+  padding: 1.1rem;
+  background: linear-gradient(135deg, #6c5ce7 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  margin-top: 0.5rem;
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.45);
+  letter-spacing: 0.03em;
+}
+
+.consult-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(108, 92, 231, 0.6);
+  filter: brightness(1.08);
+}
+
+/* ── Email Dropdown ── */
+.email-actions-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.email-options {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: rgba(30, 27, 60, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(162, 155, 254, 0.3);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  min-width: 220px;
+  z-index: 1200;
+}
+
+.email-option-btn {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.email-option-btn:last-child {
+  border-bottom: none;
+}
+
+.email-option-btn:hover {
+  background: rgba(162, 155, 254, 0.15);
+  color: #fff;
+  padding-left: 1.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .doctor-detail-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .doctor-detail-card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .doctor-detail-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .doctor-avatar {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+  }
+
+  .doctor-header-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+  }
+
+  .email-options {
+    right: 0;
+    left: 0;
+    min-width: auto;
+  }
+}

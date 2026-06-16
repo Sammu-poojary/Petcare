@@ -1,0 +1,168 @@
+/* Pet Health Dashboard */
+.health-container {
+    min-height: 100vh;
+    padding: 100px 20px 40px;
+    background-image:
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 100%, hsla(225, 39%, 30%, 1) 0, transparent 50%);
+}
+
+.health-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.health-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #a29bfe 0%, #74b9ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.health-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 2rem;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.health-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-btn {
+    background: rgba(108, 92, 231, 0.8);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background: #6c5ce7;
+}
+
+/* Lists */
+.health-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.health-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.item-date {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.item-details h4 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.1rem;
+}
+
+.item-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.status-badge {
+    margin-left: auto;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-done {
+    background: rgba(0, 184, 148, 0.2);
+    color: #00b894;
+}
+
+.status-due {
+    background: rgba(253, 203, 110, 0.2);
+    color: #fdcb6e;
+}
+
+/* Form Styles */
+.health-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.save-btn {
+    width: 100%;
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .health-container {
+        padding: 80px 15px 30px;
+    }
+
+    .health-grid {
+        grid-template-columns: 1fr;
+    }
+}
